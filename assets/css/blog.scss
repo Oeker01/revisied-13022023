@@ -1,0 +1,211 @@
+$font: 'Roboto', sans-serif;
+.post-content {
+  background: #FFFFFF;
+  box-shadow: 0 0 8px 1px #E6E6E6;
+  border-radius: 3px;
+  overflow: hidden;
+  .inner {
+    padding: 30px;
+  }
+  h1 {
+    font-family: $font;
+    font-size: 21px;
+    font-weight: 600;
+    border-bottom: 2px solid #000;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    color: #000;
+  }
+  h2, h3, h4 {
+    font-family: $font;
+    font-size: 21px;
+    font-weight: 600;
+    padding-bottom: 5px;
+    color: #000;
+  }
+  .img-area {
+    .date-hit {
+      padding: 0 30px;
+      margin: -70px 0 30px 0;
+      span {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5px 15px;
+        border-radius: 100px;
+        color: #FFFFFF;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .text-area, ul li {
+    font-size: 14px;
+    line-height: 26px;
+    color: #696969;
+  }
+}
+
+.latest {
+  padding: 20px;
+  background: #E0E0E0;
+  strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    border-bottom: 2px solid #333333;
+    margin-bottom: 15px;
+  }
+  .item {
+    box-shadow: 0 0 8px 1px #C7C7C7;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+    .text-area {
+      padding: 20px;
+      background: #FFFFFF;
+      span {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 23px;
+        color: #696969;
+      }
+    }
+    .bottom-area {
+      padding: 10px;
+      background: #F1F1F1;
+      a.more {
+        font-size: 14px;
+        display: block;
+        color: #333333;
+        text-align: right;
+        font-weight: 700;
+        em {
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+  }
+}
+
+.post-list {
+  h1 {
+    font-family: $font;
+    font-size: 24px;
+    font-weight: 700;
+    border-bottom: 2px solid #333;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    color: #333;
+  }
+  .item {
+    box-shadow: 0 0 8px 1px #C7C7C7;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    figure {
+      margin: 0;
+      padding: 0;
+    }
+    .text-area {
+      padding: 20px;
+      background: #FFFFFF;
+      span {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #656565;
+      }
+      p {
+        font-size: 14px;
+        color: #ADADAD;
+        line-height: 22px;
+      }
+    }
+    .bottom-area {
+      padding: 10px;
+      background: #F1F1F1;
+      a.more {
+        font-size: 14px;
+        display: block;
+        color: #333333;
+        text-align: right;
+        font-weight: 700;
+        em {
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+  }
+}
+
+.post-accordion {
+  h1 {
+    font-family: $font;
+    font-size: 24px;
+    font-weight: 700;
+    border-bottom: 2px solid #333;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    color: #333;
+  }
+  .card {
+    margin-bottom: 10px;
+    .card-header {
+      border-radius: 0;
+      background: #FFFFFF;
+      h5 {
+        a {
+          color: #696969;
+          font-weight: 700;
+          font-size: 14px;
+        }
+      }
+    }
+    .card-block {
+      color: #696969;
+      line-height: 26px;
+    }
+  }
+}
+
+.post-item {
+  h1 {
+    font-family: $font;
+    font-size: 24px;
+    font-weight: normal;
+    border-bottom: 2px solid #333;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    color: #333;
+  }
+  .item {
+    box-shadow: 0 0 10px 1px #DCDCDC;
+    border: none;
+    background: #FFFFFF;
+    margin-bottom: 20px;
+    h3 {
+      font-family: $font;
+      font-size: 16px;
+      color: #333;
+      padding: 20px;
+      border-bottom: 1px solid #f1f1f1;
+    }
+    .text-area {
+      padding: 20px;
+      p {
+        font-size: 14px;
+        line-height: 26px;
+        color: #696969;
+      }
+    }
+  }
+}

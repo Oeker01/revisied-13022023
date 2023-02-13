@@ -1,0 +1,14 @@
+@mixin transition($s, $delay:0s) {
+    -webkit-transition : ease-in-out all $s $delay !important;
+    -moz-transition    : ease-in-out all $s $delay !important;
+    -o-transition      : ease-in-out all $s $delay !important;
+    transition         : ease-in-out all $s $delay !important;
+  }
+  
+  @mixin animate($delay,$duration) {
+    animation-duration: $duration;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: $delay;
+  }

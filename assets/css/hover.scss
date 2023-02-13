@@ -1,0 +1,417 @@
+@import "mixin";
+
+/*
+ * Effect - 1
+ * Örnek Kullanım:
+ * <a href="#" class="effect-1"><span data-hover="ANASAYFA">ANASAYFA</span></a>
+ */
+a.effect-1 {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  padding: 0 5px;
+  color: #000000;
+
+  span {
+    position: relative;
+    display: block;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    white-space: nowrap;
+
+    &:before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+      font-weight: 700;
+      text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &:hover span,
+  &:focus span {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+/*
+ * Effect - 2
+ * Örnek Kullanım:
+ * <a href="#" class="effect-2"><span data-hover="ANASAYFA">ANASAYFA</span></a>
+ */
+a.effect-2 {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  padding: 0 6px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 400;
+
+  span {
+    position: relative;
+    display: block;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      max-width: 0;
+      color: #124E78;
+      content: attr(data-hover);
+      -webkit-transition: max-width 0.3s;
+      -moz-transition: max-width 0.3s;
+      transition: max-width 0.3s;
+    }
+  }
+
+  &:hover span:before,
+  &:focus span:before {
+    max-width: 100%;
+  }
+
+}
+
+/*
+ * Effect - 3
+ * Örnek Kullanım:
+ * <a href="#" class="effect-3"><span>Devamı</span></a>
+ */
+a.effect-3 {
+  position: relative;
+  display: inline-block;
+  padding: 5px 15px;
+  text-align: center;
+  background: #124E78;
+  border: 2px solid;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin-top: 10px;
+  border-radius: 3px;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 9;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 10px;
+    top: 0;
+    left: -20px;
+    border-radius: 100%;
+    transform-origin: left;
+    background: #FFFFFF;
+    opacity: 0;
+    @include transition(.3s);
+  }
+
+  &:hover span {
+    color: #124E78;
+  }
+
+  &:hover:after {
+    opacity: 1;
+    animation: animation-effect-3;
+    @include animate(.1s, .3s);
+  }
+}
+
+@keyframes animation-effect-3 {
+  0% {
+    transform: scale(0) rotate(45deg);
+  }
+
+  100% {
+    transform: scale(250) rotate(45deg);
+  }
+}
+
+/*
+ * Effect - 4
+ * Örnek Kullanım:
+ * <a href="#" class="effect-4"><span>Devamı</span></a>
+ */
+a.effect-4 {
+  position: relative;
+  display: inline-block;
+  padding: 5px 15px;
+  text-align: center;
+  border: 2px solid #124E78;
+  color: #124E78;
+  font-weight: 400;
+  margin-top: 10px;
+  border-radius: 3px;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 9;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 10px;
+    top: 0;
+    left: -20px;
+    border-radius: 100%;
+    transform-origin: left;
+    background: #124E78;
+    opacity: 0;
+    @include transition(.3s);
+  }
+
+  &:hover span {
+    color: #FFFFFF;
+  }
+
+  &:hover:after {
+    opacity: 1;
+    animation: animation-effect-4;
+    @include animate(.1s, .3s);
+  }
+}
+
+@keyframes animation-effect-4 {
+  0% {
+    transform: scale(0) rotate(45deg);
+  }
+
+  100% {
+    transform: scale(250) rotate(45deg);
+  }
+}
+
+/*
+ * Effect - 5
+ * Örnek Kullanım:
+ * <a href="#" class="effect-5">Devamı</a>
+ */
+a.effect-5 {
+  position: relative;
+  display: inline-block;
+  color: #000000;
+  font-weight: 700;
+  margin: 0 20px 20px 0;
+  @include transition(.3s);
+
+  &:hover {
+    color: #333333;
+  }
+
+  &:after, &:before {
+    display: block;
+    content: '';
+    width: 0;
+    height: 2px;
+  }
+
+  &:after {
+    @include transition(.2s);
+  }
+
+  &:before {
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    @include transition(.2s, .2s);
+  }
+
+  &:hover:after,
+  &:hover:before {
+    background: #000000;
+    width: 100%;
+  }
+}
+
+/*
+ * Effect - 6
+ * Örnek Kullanım:
+ * <a href="#" class="effect-6">Devamı</a>
+ */
+a.effect-6 {
+  position: relative;
+  display: inline-block;
+  color: #000000;
+  font-weight: 700;
+  margin: 0 20px 20px 0;
+  @include transition(.3s);
+
+  &:hover {
+    color: #333333;
+  }
+
+  &:after, &:before {
+    display: block;
+    content: '';
+    width: 0;
+    height: 2px;
+    @include transition(.3s);
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &:hover:after,
+  &:hover:before {
+    background: #000000;
+    width: 100%;
+  }
+
+}
+
+/*
+ * Effect - 7
+ * Örnek Kullanım:
+ * <a class="effect-7" href="#">Home</a>
+ */
+
+a.effect-7 {
+  position: relative;
+  display: block;
+  color: #000000;
+  font-weight: 700;
+  margin: 0 20px 20px 0;
+  text-align: center;
+  padding: 5px 0;
+  @include transition(.3s);
+
+  &:hover {
+    color: #333333;
+  }
+
+  &:after, &:before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    @include transition(.3s);
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:hover:after,
+  &:hover:before {
+    background: #000000;
+    transform: scaleX(1);
+  }
+}
+
+/*
+ * Effect - 8
+ * Örnek Kullanım:
+ * <a class="effect-8" href="#">Home</a>
+ */
+
+a.effect-8 {
+  position: relative;
+  display: inline-block;
+  color: #000000;
+  font-weight: 700;
+  margin: 0 20px 20px 0;
+  letter-spacing: 0;
+  text-align: center;
+  padding: 5px 0;
+  @include transition(.3s);
+
+  &:hover {
+    color: #333333;
+    letter-spacing: 2px;
+  }
+
+  &:after, &:before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    @include transition(.3s);
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:hover:after,
+  &:hover:before {
+    background: #000000;
+    transform: scaleX(1);
+  }
+}
+
+/*
+ * Effect - 9
+ * Örnek Kullanım:
+ * <a class="effect-9" href="#">Home</a>
+ */
+
+a.effect-9 {
+  position: relative;
+  display: inline-block;
+  color: #000000;
+  font-weight: 700;
+  margin: 0 20px 20px 0;
+  letter-spacing: 0;
+  text-align: center;
+  padding: 5px 0;
+  @include transition(.3s);
+
+  &:hover {
+    color: #333333;
+    letter-spacing: 2px;
+  }
+
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    @include transition(.3s);
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  &:hover:after {
+    background: #000000;
+    transform: scaleX(1);
+  }
+}

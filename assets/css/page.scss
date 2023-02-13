@@ -1,0 +1,118 @@
+$font: 'Roboto', sans-serif;
+.cke_editable {
+  padding: 30px;
+  background: #FFFFFF;
+  box-shadow: 0 0 8px 1px #E6E6E6;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 3px;
+  h1, h2 {
+    font-family: $font;
+    font-size: 21px;
+    font-weight: 600;
+    border-bottom: 2px solid #000;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    color: #000;
+  }
+  h3, h4, h5 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  p, ul li {
+    font-size: 14px;
+    line-height: 26px;
+    color: #696969;
+  }
+  .badge {
+    font-size: 14px;
+  }
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.category {
+  .card {
+    border: none;
+    .card-header {
+      background: #333;
+      font-family: $font;
+      h5 {
+        a {
+          font-weight: normal;
+          font-size: 15px;
+          letter-spacing: 0.03em;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}
+
+.page-tabs {
+  ul.nav {
+    li {
+      a.nav-link {
+        font-weight: 700;
+        border: none;
+        color: #333;
+      }
+    }
+  }
+  .tab-content {
+    padding: 30px;
+    background: #ffffff;
+  }
+  h1, h2 {
+    font-family: $font;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    color: #333;
+  }
+}
+
+.page-accordion {
+  .card-header {
+    a {
+      font-weight: 700;
+      border: none;
+      color: #333;
+    }
+  }
+
+  .card-body {
+    padding: 30px;
+    background: #ffffff;
+  }
+
+  h1, h2 {
+    font-family: $font;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    color: #333;
+  }
+}
+
+.page-box {
+  .item {
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    .card-body {
+      border-top: 1px solid #f1f1f1;
+      h5.card-title {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 0;
+        a {
+          color: #333;
+        }
+      }
+    }
+  }
+}
